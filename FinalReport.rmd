@@ -22,7 +22,7 @@ DrugGuys = filter(abac,Ivdrug=="user" )
 To compire the columns in the LBGT we see the chisq, fisher test, and a barchart. the first one will be treatment and female. The second treatment and male.
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?.  If you skimp in this section expect to be marked down in your grade. Paint a picture of the project a couple of paragraphs is expected!-->
 
-A new  preventative aides (abacavirinol) is under test in clinical trials. Analyze the effectiveness of this drug across the board. Consider population subgroups by gender, drug use, and sexual orientation. Finish this!
+A new  preventative aides (abacavirinol) is under test in clinical trials. Analyze the effectiveness of this drug across the board. Consider population subgroups by gender, drug use, and sexual orientation. with this project we will deteermine if the drug is working in all diferent groups. First we will determine different groups, in this case we will see if the drug is working in All Group. we compire  the graphic and different results we have in Chisq.test, chisqtestGC and fisher.test.
 
 # Methods for everybody
 we will make diferents groups with the data we have,with all, Females, Males, gays, and drug abusers. we will compare the results to determine 
