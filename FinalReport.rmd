@@ -25,9 +25,11 @@ DrugGuys = filter(abac,Ivdrug=="user" )
 A new preventative aides (abacavirinol) are under test in clinical trials. Analyze the effectiveness of this drug across the board. Consider population subgroups by gender, drug use, and sexual orientation. with this project we will determine if the drug is working in all different groups. First, we will divide into different groups, and we will compare the results to determine if it rejects or not. We will see if the drug is working in all different groups of people. We compare  the graph and different results we have in Chisq.test, chisqtestGC and fisher.test.
 
 # Methods for everybody
-We will compare the results with Graphical results, NumericalDescriptive results, Inferential results with P-Value and Fisher test.We will make different groups with the data we have with all, Females, Males, gay males, and drug abusers. we will compare the results to determine if the drug work or not in the different groups.
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
+
+We will compare the results with Graphical results, NumericalDescriptive results, Inferential results with P-Value and Fisher test.We will make different groups with the data we have with all, Females, Males, gay males, and drug abusers. we will compare the results to determine if the drug work or not in the different groups.
+
 
 #Results
 
@@ -45,7 +47,7 @@ The results for the first group which is Everybody;we can see that the drug does
 barchartGC(~infected+ treatment, data = abac,type = "percent")
 ```
 
-This graphic showing us that the drug works, the graph shows that the people who took the placebo are the majority of people overall who got Aids.
+This graph is showing us that the drug works, the graph shows that the people who took the placebo are the majority of people overall who got Aids.
 
 ### Numerical Descriptive Results
 ```{r}
@@ -54,7 +56,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-In this table we can see that results are showing that drug works because the people who took the drug, the percentage is less that the people took placebo.
+In this table we can see that results are showing the drug works because the people who took the drug has a percentage which is lesser that the people took placebo.
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
@@ -74,7 +76,9 @@ Here we can see the P-value is 0.016, thats less then 0.05, that means the drug 
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
-The drug works, after we compare the results with all the different tests we define that the drug works, in everybody's group.the percentage of people who took the drug shows lesser pecentage of aids; and the people who took placebo are higher of aids. 
+The drug works, after we compare the results with all the different tests, we define that the drug works in everybody's group. the percentage of people who took the drug shows lesser pecentage of aids; and the people who took placebo are higher of aids. 
+
+
 
 # Methods for Girls
 
@@ -90,8 +94,8 @@ We will compare the results with Graphical results, NumericalDescriptive results
 
 ## Descriptive Results
 
-we can see in this case is very clear that the drug in the girls group did not works.
-The girls who took the drug got more infected that the girls did took the placebo. the percentage of girls tht took the drugs id higher that the girls took the pacebo.
+we can see in this case is very clear that the drug in the girls group did not work.
+The girls who took the drug, got more infected with aids that the girls took the placebo. the percentage of girls tht took the drugs is higher that the girls took the pacebo.
 
 ### Graphical Descriptive Results
 
@@ -100,9 +104,12 @@ The girls who took the drug got more infected that the girls did took the placeb
 barchartGC(~infected+ treatment, data = Girls,type = "percent")
 ```
 
-In this graphic we can see that drug did not works for girls. Girls who took the drug, 60% got aids, and the girls who took placebo just 40% got aids. trhe percentege of get aids is higher if you are a girl and take the drug.
+In this graph, we can see that drug did not work for girls. Girls who took the drug, 60% got aids, and the girls who took placebo only got 40% got aids. the percentege of getting aids is higher if you are a girl and take the drug.
+
 
 ### Numerical Descriptive Results
+
+
 ```{r}
 table1 <- xtabs(~infected+ treatment, data = Girls)
 rowPerc(table1)
@@ -129,22 +136,28 @@ The P-value is 0.049 what this mean is the result is low, that mean the p-value 
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
-The drug does not work on the girls group, after we compare the results with all the different tests we define that the drug does not work, in the boys group.The percentage of the boys who took the drug shows lesser pecentage of aids; and the people who took placebo are higher of aids.
-  
-# Methods for Boys
+The drug does not work on the girls group, after we compare the results with all the different tests we define that the drug does not work.
 
-We will compare the results with Graphical results, NumericalDescriptive results, Inferential results with P-Value and Fisher test.We will make different groups with the data we have with a Male's group.
+
+# Methods for Boys
 
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
+
+We will compare the results with Graphical results, Numerical Descriptive results, Inferential results with P-Value and Fisher test.We will make different groups with the data we have with a Male's group.
+
+
 
 #Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
-Looks the drug does work on boys, the boys who took the drug had lesser persentage of getting aids. 
 
 ## Descriptive Results
+
+Seems the drug does work on boys, the boys who took the drug had lesser persentage of getting aids. 
+
+
 
 ### Graphical Descriptive Results
 
@@ -153,13 +166,17 @@ Looks the drug does work on boys, the boys who took the drug had lesser persenta
 barchartGC(~infected+ treatment, data = Boys,type = "percent")
 ```
 
+This graph is showing that in the group of boys, the drug does work. when the boys take the drug, the percentage of getting aids is lower then if they take pacebo the percenge is higher.  
+
+
 ### Numerical Descriptive Results
+
 ```{r}
 table1 <- xtabs(~infected+ treatment, data = Boys)
 rowPerc(table1)
 colPerc(table1)
 ```
-
+In this table the results are showing that if the boys take the drug is lower the pecenge to get aids, is similar of the results at the graph.
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
@@ -172,10 +189,16 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
+
+The P-value is 0.063 that is higher that 0.05 that means the p-value is showing the drug does work on boys. 
+
+
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
-  
+
+The drug does work on the boys group, after we compare the results with all the different tests we define that the drug does work, in the boys group.The percentage of the boys who took the drug shows lesser pecentage of aids; and the people who took placebo are higher of getting aids.
+
 # Methods for DrugGuys
 
 We will compare the results with Graphical results, NumericalDescriptive results, Inferential results with P-Value and Fisher test.We will make different groups with the data we have with a drug abusersgroup. 
@@ -191,12 +214,17 @@ We will compare the results with Graphical results, NumericalDescriptive results
 
 ## Descriptive Results
 
+Seems the drug does work on DrugGuys, the DrugGuys who took the drug had lesser persentage of getting aids. 
+  
+  
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 ```{r}
 barchartGC(~infected+ treatment, data = DrugGuys,type = "percent")
 ```
+
+This graph is showing that in the group of DrugGuys, the drug does work. When the DrugGuys take the drug the percentage of getting aids is lower then if they take pacebo the percentage is higher.  
 
 ### Numerical Descriptive Results
 ```{r}
@@ -208,6 +236,8 @@ colPerc(table1)
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+In this table we can see the DrugGuys that took the drug, the percentage of getting aids is lower that the DrugGuys who took the placebo. In this case the drug does work in this group. 
+
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
@@ -217,7 +247,13 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
+
+The P-value is 0.019 what this mean is the result is lower that 0.05, that means the p-value is showing the drug does work on DrugGuys. 
+
 # Discussion and Conclusion
+
+The drug does work on the DrugGuys group, after we compare the results with all the different tests we define that the drug does work, in the DrugGuys group.The percentage of the DrugGuys who took the drug shows lesser pecentage of aids; and the people who took placebo are higher of getting aids.
+
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
   
@@ -234,6 +270,9 @@ We will compare the results with Graphical results, NumericalDescriptive results
 
 ## Descriptive Results
 
+we can see in this case is very clear that the drug in the girls group did not work.
+The girls who took the drug got more infected with aids then the girls who took the placebo. the percentage of girls that took the drugs is higher then the girls who took the pacebo.
+
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
@@ -241,13 +280,16 @@ We will compare the results with Graphical results, NumericalDescriptive results
 barchartGC(~infected+ treatment, data = LBGTguys,type = "percent")
 ```
 
+In this graph we can see that drug did not work for LBGTguys. the people in this group who took the drug, that 70% got aids, and the people who took placebo just 30% got aids. the percentege of getting aids is higher the LBGT guys who take the drug most likley will get aids.
+
+
 ### Numerical Descriptive Results
 ```{r}
 table1 <- xtabs(~infected+ treatment, data = LBGTguys)
 rowPerc(table1)
 colPerc(table1)
 ```
-
+In this table we can see the results showing the people who took the drug is higher, the LBGT guys that took drugs 68.97 percentage got aids and the rest of the people took placebo did not got aids.
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
@@ -261,9 +303,11 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+The P-value is 0.56 what this means is the result is just a tad higher in this case does not work in the LBGTguys group.  
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
-  
+
+The drug does not work on the for LBGT group, after we compare the results with all the different tests, we define that the drug does not work for this group.  
    
